@@ -32,19 +32,6 @@ class LeaderboardEntry extends Equatable {
   List<Object?> get props => [rank, playerInitials, score, character];
 }
 
-/// Converts [LeaderboardEntryData] from repository to [LeaderboardEntry].
-extension LeaderboardEntryDataX on LeaderboardEntryData {
-  /// Conversion method to [LeaderboardEntry]
-  LeaderboardEntry toEntry(int position) {
-    return LeaderboardEntry(
-      rank: position.toString(),
-      playerInitials: playerInitials,
-      score: score,
-      character: character.toTheme.leaderboardIcon,
-    );
-  }
-}
-
 /// Converts [CharacterType] to [CharacterTheme] to show on UI character theme
 /// from repository.
 extension CharacterTypeX on CharacterType {
